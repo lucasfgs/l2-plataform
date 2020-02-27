@@ -6,11 +6,15 @@ export default function Input({
   title,
   type = "text",
   name,
-  placeholder = ""
+  placeholder = "",
+  required = false
 }) {
   return (
     <Container>
-      <label htmlFor="">{title}</label>
+      <label htmlFor="">
+        {title}
+        {required && <span>*</span>}
+      </label>
       <input type={type} name={name} placeholder={placeholder} />
     </Container>
   );

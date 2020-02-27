@@ -6,7 +6,7 @@ import Login from "./pages/login";
 export default function routes() {
   return (
     <BrowserRouter>
-      <Route path="/" exact component={Login} />
+      <Route path="/plataform" exact component={Login} />
     </BrowserRouter>
   );
 }

@@ -4,30 +4,36 @@ import {
   Container,
   Background,
   LogoImage,
+  LogoRedirect,
   LoginContainer,
   Form,
-  Title,
-  FormContent
+  FormContent,
+  ForgotPassword,
+  Button
 } from "./styles";
-import Logo from "../../assets/img/logo.png";
+import Logo from "../../assets/img/logob1.png";
 import Input from "../../components/Input";
 
 export default function login() {
   return (
     <Container>
-      <Background>
-        <LogoImage src={Logo} />
-      </Background>
+      <Background />
       <LoginContainer>
+        <LogoRedirect href="/">
+          <LogoImage src={Logo} />
+        </LogoRedirect>
         <Form>
-          <Title>Login</Title>
           <FormContent>
             <Input
-              title="E-mail *"
+              title="E-mail"
               name="email"
               placeholder="example@example.com"
             />
-            <Input title="Password *" name="password" type="password" />
+            <Input title="Password" name="password" type="password" />
+            <ForgotPassword>Forgot your password?</ForgotPassword>
+            <Button href="">
+              <span>Login</span>
+            </Button>
           </FormContent>
         </Form>
       </LoginContainer>
