@@ -7,4 +7,9 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Roboto', 'Sans Serif' ;      
     }
+
+    html, body, #app, #app>div {
+        height: 100%;
+    }
+    
 `;

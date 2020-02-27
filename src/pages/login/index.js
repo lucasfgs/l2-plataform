@@ -9,7 +9,10 @@ import {
   Form,
   FormContent,
   ForgotPassword,
-  Button
+  Button,
+  SecondaryButton,
+  CreateAccountContainer,
+  FormText
 } from "./styles";
 import Logo from "../../assets/img/logob1.png";
 import Input from "../../components/Input";
@@ -34,6 +37,12 @@ export default function login() {
             <Button href="">
               <span>Login</span>
             </Button>
+            <CreateAccountContainer>
+              <FormText>Dont have a account yet?</FormText>
+              <SecondaryButton href="">
+                <span>Create Account</span>
+              </SecondaryButton>
+            </CreateAccountContainer>
           </FormContent>
         </Form>
       </LoginContainer>

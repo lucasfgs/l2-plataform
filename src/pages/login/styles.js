@@ -7,7 +7,7 @@ export const Container = styled.div`
   height: 100vh;
   background: #3b3648;
 
-  @media (max-height: 420px) {
+  @media (max-height: 560px) {
     height: 100%;
   }
 `;
@@ -45,7 +45,7 @@ export const Form = styled.div`
 `;
 export const Title = styled.h1``;
 export const FormContent = styled.div`
-  height: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
 `;
@@ -100,4 +100,38 @@ export const Button = styled.a`
     opacity: 1;
     width: 100%;
   }
+`;
+
+export const SecondaryButton = styled.a`
+  height: 40px;
+  width: 200px;
+  margin-top: 10px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ddd;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  font-size: 18px;
+
+  :hover {
+    background: #353144;
+    border: 2px solid #27ae60;
+  }
+`;
+
+export const FormText = styled.span`
+  color: #ddd;
+  font-size: 16px;
+`;
+export const CreateAccountContainer = styled.div`
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
