@@ -30,6 +30,8 @@ function Login() {
 
     const { token, user: userData } = resp.data;
 
+    sessionStorage.setItem("token", token);
+
     console.log(token, userData);
   }
 
