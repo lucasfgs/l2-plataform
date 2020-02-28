@@ -1,7 +1,5 @@
 const INITIAL_STATE = {
-  email: "",
-  nome: "",
-  login: ""
+  data: {}
 };
 
 const user = (state = INITIAL_STATE, action) => {
@@ -9,9 +7,7 @@ const user = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "@user/login":
       return {
-        email: action.email,
-        name: action.name,
-        login: action.login
+        data: action.user
       };
     default:
       return state;

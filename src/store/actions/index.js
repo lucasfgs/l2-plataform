@@ -1,6 +1,4 @@
-export const login = (email, login, name) => ({
+export const login = user => ({
   type: "@user/login",
-  email,
-  login,
-  name
+  user
 });

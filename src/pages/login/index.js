@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { Link } from "react-router-dom";
+
+import { login } from "../../store/actions";
 
 import {
   Container,
@@ -18,7 +23,7 @@ import Logo from "../../assets/img/logob1.png";
 import Input from "../../components/Input";
 import api from "../../services/api";
 
-function Login() {
+function Login({ login }) {
   const [user, setUser] = useState({});
 
   function handleChange(e) {
@@ -32,7 +37,7 @@ function Login() {
 
     sessionStorage.setItem("token", token);
 
-    console.log(token, userData);
+    login(userData);
   }
 
   return (
@@ -57,9 +62,15 @@ function Login() {
               onChange={handleChange}
             />
             <ForgotPassword>Forgot your password?</ForgotPassword>
-            <Button onClick={handleSubmit}>
-              <span>Login</span>
-            </Button>
+            <Link
+              style={{ textDecoration: "none", margin: "auto" }}
+              to="/dashboard"
+            >
+              <Button onClick={handleSubmit}>
+                <span>Login</span>
+              </Button>
+            </Link>
+
             <CreateAccountContainer>
               <FormText>Dont have a account yet?</FormText>
               <SecondaryButton href="">
@@ -73,4 +84,7 @@ function Login() {
   );
 }
 
-export default Login;
+const mapDispatchToProps = dispatch => ({
+  login: bindActionCreators(login, dispatch)
+});
+export default connect(null, mapDispatchToProps)(Login);
