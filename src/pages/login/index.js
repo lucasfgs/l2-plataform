@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Container,
@@ -16,8 +16,23 @@ import {
 } from "./styles";
 import Logo from "../../assets/img/logob1.png";
 import Input from "../../components/Input";
+import api from "../../services/api";
 
-export default function login() {
+function Login() {
+  const [user, setUser] = useState({});
+
+  function handleChange(e) {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  }
+
+  async function handleSubmit() {
+    const resp = await api.post("/login", user);
+
+    const { token, user: userData } = resp.data;
+
+    console.log(token, userData);
+  }
+
   return (
     <Container>
       <Background />
@@ -31,10 +46,16 @@ export default function login() {
               title="E-mail"
               name="email"
               placeholder="example@example.com"
+              onChange={handleChange}
             />
-            <Input title="Password" name="password" type="password" />
+            <Input
+              title="Password"
+              name="password"
+              type="password"
+              onChange={handleChange}
+            />
             <ForgotPassword>Forgot your password?</ForgotPassword>
-            <Button href="">
+            <Button onClick={handleSubmit}>
               <span>Login</span>
             </Button>
             <CreateAccountContainer>
@@ -49,3 +70,5 @@ export default function login() {
     </Container>
   );
 }
+
+export default Login;

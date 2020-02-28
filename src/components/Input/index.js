@@ -7,7 +7,8 @@ export default function Input({
   type = "text",
   name,
   placeholder = "",
-  required = false
+  required = false,
+  onChange
 }) {
   return (
     <Container>
@@ -15,7 +16,12 @@ export default function Input({
         {title}
         {required && <span>*</span>}
       </label>
-      <input type={type} name={name} placeholder={placeholder} />
+      <input
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        onChange={onChange}
+      />
     </Container>
   );
 }

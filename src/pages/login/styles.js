@@ -70,6 +70,7 @@ export const Button = styled.a`
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  cursor: pointer;
   background-color: #ff804e;
   background-image: linear-gradient(62deg, #ff804e 0%, #f15d21 100%);
   font-size: 20px;
