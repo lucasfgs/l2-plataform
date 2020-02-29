@@ -26,7 +26,7 @@ export default function Sidebar() {
       </LogoContainer>
       <Divider />
       <Menu>
-        <MenuItem>
+        <MenuItem active={true}>
           <MdAccountBox className="icon" />
           Account
         </MenuItem>
