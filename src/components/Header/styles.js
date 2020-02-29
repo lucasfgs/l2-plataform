@@ -3,37 +3,28 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 60px;
   width: 100%;
-  background: #3b3648;
+  /* background-color: #1e1c24; */
+  /* background-image: linear-gradient(62deg, #d05f23 0%, #bb471d 100%); */
+  border: 1px solid #adadad;
   padding: 0 60px;
   display: flex;
   justify-content: space-between;
 `;
 
-export const LogoContainer = styled.div``;
-
-export const Logo = styled.img`
-  height: 55px;
+export const Profile = styled.div`
+  align-self: center;
+  margin-right: auto;
 `;
 
-export const Menu = styled.ul`
-  display: flex;
-  list-style: none;
-  width: 300px;
-`;
-
-export const MenuItem = styled.li`
-  margin: auto;
-  color: #e5e5e5;
-  cursor: pointer;
-
-  :hover {
-    color: #ff804e;
-  }
+export const ProfileText = styled.h1`
+  color: #66615b;
+  font-size: 18px;
+  font-weight: 500;
 `;
 
 export const Logout = styled.a`
   margin: auto 0;
-  color: #e5e5e5;
+  color: #66615b;
   cursor: pointer;
 
   :hover {

@@ -8,7 +8,8 @@ export default function Input({
   name,
   placeholder = "",
   required = false,
-  onChange
+  onChange,
+  onKeyPress = null
 }) {
   return (
     <Container>
@@ -21,6 +22,7 @@ export default function Input({
         name={name}
         placeholder={placeholder}
         onChange={onChange}
+        onKeyPress={onKeyPress}
       />
     </Container>
   );

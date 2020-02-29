@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { Link } from "react-router-dom";
 
 import { login } from "../../store/actions";
 
@@ -23,7 +22,7 @@ import Logo from "../../assets/img/logob1.png";
 import Input from "../../components/Input";
 import api from "../../services/api";
 
-function Login({ login }) {
+function Login({ login, history }) {
   const [user, setUser] = useState({});
 
   function handleChange(e) {
@@ -38,6 +37,16 @@ function Login({ login }) {
     sessionStorage.setItem("token", token);
 
     login(userData);
+
+    history.push("/dashboard");
+  }
+
+  function enterPressed(e) {
+    let code = e.keyCode || e.which;
+    console.log(code);
+    if (code === 13) {
+      handleSubmit();
+    }
   }
 
   return (
@@ -54,23 +63,20 @@ function Login({ login }) {
               name="email"
               placeholder="example@example.com"
               onChange={handleChange}
+              onKeyPress={enterPressed}
             />
             <Input
               title="Password"
               name="password"
               type="password"
               onChange={handleChange}
+              onKeyPress={enterPressed}
             />
             <ForgotPassword>Forgot your password?</ForgotPassword>
-            <Link
-              style={{ textDecoration: "none", margin: "auto" }}
-              to="/dashboard"
-            >
-              <Button onClick={handleSubmit}>
-                <span>Login</span>
-              </Button>
-            </Link>
 
+            <Button onClick={handleSubmit}>
+              <span>Login</span>
+            </Button>
             <CreateAccountContainer>
               <FormText>Dont have a account yet?</FormText>
               <SecondaryButton href="">

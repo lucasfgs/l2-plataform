@@ -1,28 +1,13 @@
 import React from "react";
 
-import {
-  Container,
-  LogoContainer,
-  Logo,
-  Menu,
-  MenuItem,
-  Logout
-} from "./styles";
-
-import logo from "../../assets/img/logob1.png";
+import { Container, Profile, ProfileText, Logout } from "./styles";
 
 export default function Header() {
   return (
     <Container>
-      <LogoContainer>
-        <Logo src={logo} />
-      </LogoContainer>
-      <Menu>
-        <MenuItem>Account</MenuItem>
-        <MenuItem>Shop</MenuItem>
-        <MenuItem>Donate</MenuItem>
-        <MenuItem>Support</MenuItem>
-      </Menu>
+      <Profile>
+        <ProfileText>Welcome Lucas Ferreira</ProfileText>
+      </Profile>
       <Logout>Logout</Logout>
     </Container>
   );
