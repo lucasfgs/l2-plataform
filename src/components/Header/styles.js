@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 60px;
   width: 100%;
-  /* background-color: #1e1c24; */
+
   /* background-image: linear-gradient(62deg, #d05f23 0%, #bb471d 100%); */
   border: 1px solid #adadad;
   padding: 0 60px;
@@ -19,7 +19,7 @@ export const Profile = styled.div`
 export const ProfileText = styled.h1`
   color: #66615b;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
 `;
 
 export const Logout = styled.a`
