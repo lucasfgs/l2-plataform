@@ -15,13 +15,6 @@ export const Section = styled.div`
   padding: 40px 40px;
 `;
 
-export const SectionTitle = styled.h1`
-  color: #66615b;
-  font-size: 28px;
-  font-weight: 400;
-  width: 200px;
-`;
-
 export const SectionCard = styled.div`
   width: 100%;
   min-height: 300px;

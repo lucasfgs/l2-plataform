@@ -6,7 +6,7 @@ import Donate from "./views/Donate";
 import Shop from "./views/Shop";
 import Support from "./views/Support";
 
-import { Container, Main, Section, SectionTitle, SectionCard } from "./styles";
+import { Container, Main, Section, SectionCard } from "./styles";
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import api from "../../services/api";
@@ -35,12 +35,11 @@ export default function Dashboard({ history }) {
           <Header />
           <Section>
             <SectionCard>
-              <SectionTitle>Account</SectionTitle>
               <Switch>
                 <Route path="/dashboard/account" component={Account} />
-                <Route path="/dashboard/account" component={Account} />
-                <Route path="/dashboard/account" component={Account} />
-                <Route path="/dashboard/account" component={Account} />
+                <Route path="/dashboard/shop" component={Shop} />
+                <Route path="/dashboard/donate" component={Donate} />
+                <Route path="/dashboard/support" component={Support} />
               </Switch>
             </SectionCard>
           </Section>
