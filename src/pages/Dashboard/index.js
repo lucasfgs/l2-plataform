@@ -36,7 +36,7 @@ export default function Dashboard({ history }) {
           <Section>
             <SectionCard>
               <Switch>
-                <Route path="/dashboard/account" component={Account} />
+                <Route path="/dashboard/" component={Account} />
                 <Route path="/dashboard/shop" component={Shop} />
                 <Route path="/dashboard/donate" component={Donate} />
                 <Route path="/dashboard/support" component={Support} />

@@ -30,11 +30,17 @@ export default function Account() {
         </Setting>
         <Setting>
           <SettingContent>
-            <SettingTitle>Senha</SettingTitle>
+            <SettingTitle>Password</SettingTitle>
             <SettingInput value="Lucas ferreira" type="password" />
           </SettingContent>
         </Setting>
-        <SettingButton>Save</SettingButton>
+        <Setting>
+          <SettingContent>
+            <SettingTitle>Confirm password</SettingTitle>
+            <SettingInput value="Lucas ferreira" type="password" />
+          </SettingContent>
+        </Setting>
+        <SettingButton>Save Settings</SettingButton>
       </SettingsContainer>
     </Container>
   );
